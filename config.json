@@ -1,0 +1,10 @@
+{
+    "libpath": "/home/klykov/wrks_ext/slot-update-geyser-plugin/target/release/libgeyser_slot_update_plugin.so",
+    "log": { "level": "debug" },
+    "tokio": { "worker_threads": 2, "thread_name": "slot_update_runtime" },
+    "broadcaster": {
+        "bind_address": "127.0.0.1:0",
+        "target_address": "127.0.0.1:9000",
+        "channel_capacity": 16
+    }
+}

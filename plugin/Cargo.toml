@@ -1,0 +1,34 @@
+[package]
+name = "geyser-slot-update-plugin"
+version = "0.1.0"
+authors = ["Anza Maintainers <maintainers@anza.xyz>"]
+repository = "https://github.com/klykov/slot-update-geyser-plugin"
+homepage = "https://anza.xyz/"
+license = "Apache-2.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "config-check"
+
+[dependencies]
+agave-geyser-plugin-interface = { workspace = true }
+anyhow = { workspace = true }
+clap = { version = "=4.3.24", features = ["cargo", "derive"] }
+log = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+solana-clock = { workspace = true }
+solana-logger = { workspace = true }
+solana-time-utils = { workspace = true }
+tempfile = { workspace = true }
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "time", "fs", "net"] }
+tokio-util = { workspace = true }
+
+[build-dependencies]
+anyhow = { workspace = true }
+cargo-lock = { workspace = true }
+git-version = { workspace = true }
+vergen = { workspace = true, features = ["build", "rustc"] }
