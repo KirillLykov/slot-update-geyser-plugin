@@ -9,7 +9,7 @@ lto = true
 codegen-units = 1
 
 [workspace.dependencies]
-agave-geyser-plugin-interface = { path = "../solana_2/geyser-plugin-interface" }
+agave-geyser-plugin-interface = { git = "https://github.com/anza-xyz/agave.git", rev = "d6a44baa" }
 anyhow = "1"
 cargo-lock = "10"
 clap = { version = "4", features = ["cargo", "derive"] }
